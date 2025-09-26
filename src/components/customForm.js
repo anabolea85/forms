@@ -25,7 +25,7 @@ const container = ({children}) => {
 const title = ({title}) => {
   return (
     <Box>
-      <Typography sx={{fontSize:'2rem', textAlign: 'center'}}>{title}</Typography>
+      <Typography sx={{fontSize:'2rem', textAlign: 'center', padding: '30px'}}>{title}</Typography>
     </Box>
   )
 }
@@ -46,15 +46,15 @@ const rightBox = ({children}) => {
   )
 }
 
-const textField = ({label, type}) => {
+const textField = ({label, type, onChange}) => {
     return (
-      <TextField label={label} type={type}/>
+      <TextField label={label} type={type} onChange={onChange}/>
     )
 }
 
-const button = ({text}) => {
+const button = ({text, onClick}) => {
   return (
-    <Button>{text}</Button>
+    <Button onClick={onClick}>{text}</Button>
   )
 }
 
